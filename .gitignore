@@ -10,3 +10,9 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+/Waveview/nbproject/private/
+/eduDSP/build/
+/eduDSP/.nb-gradle/profiles/private/
+/eduDSP/nbproject/private/
+/eduDSP/dist/
+/JavaFXApplication2/nbproject/private/
