@@ -5,7 +5,7 @@
  */
 package com.github.entercode.edudsp;
 
-import com.github.entercode.util.WaveLoader;
+import com.github.entercode.util.*;
 import javafx.application.Application;
 import static javafx.application.Application.launch;
 import javafx.event.ActionEvent;
@@ -14,7 +14,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.*;
 import javafx.stage.Stage;
-import org.omg.CORBA.ORB;
 
 /**
  *
@@ -23,9 +22,11 @@ import org.omg.CORBA.ORB;
 public class eduDSPalfa extends Application {
 	
 	WaveLoader wl;
+	Audioi ai;
 	
 	public void init() {
 		wl = new WaveLoader("test.wav");
+		ai = new Audioi();
 	}
 	
 	@Override
@@ -36,6 +37,7 @@ public class eduDSPalfa extends Application {
 		chkbox.setText("hogehoge");
 		init();
 		wl.load();
+		
 		
 		btn.setText("Say 'Hello World'");
 		btn.setOnAction(new EventHandler<ActionEvent>() {

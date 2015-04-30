@@ -66,6 +66,7 @@ public class WaveView extends JFrame {
 			
 			AudioInputStream ais = new AudioInputStream(line);
 			currentHeight = ais.read(b);
+			
 			System.out.println(currentHeight);
 			
 			System.out.println("Start recording...");
@@ -99,11 +100,11 @@ public class WaveView extends JFrame {
 			AudioInputStream audioInputStream 
 				= AudioSystem.getAudioInputStream(file);
         
-			WaveformPanelContainer container = new WaveformPanelContainer(); 
-			container.setAudioToDisplay(audioInputStream);
+			//WaveformPanelContainer container = new WaveformPanelContainer(); 
+			//container.setAudioToDisplay(audioInputStream);
        
-			frame.getContentPane().setLayout(new BorderLayout());		
-			frame.getContentPane().add(container, BorderLayout.CENTER);
+			//frame.getContentPane().setLayout(new BorderLayout());		
+			//frame.getContentPane().add(container, BorderLayout.CENTER);
 		
 			frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
        

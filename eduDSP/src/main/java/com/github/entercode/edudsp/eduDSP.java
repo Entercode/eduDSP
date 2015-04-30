@@ -10,8 +10,8 @@ import static javafx.application.Application.launch;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.layout.StackPane;
+import javafx.scene.control.*;
+import javafx.scene.layout.*;
 import javafx.stage.Stage;
 
 /**
@@ -23,6 +23,10 @@ public class eduDSP extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		Button btn = new Button();
+		CheckBox chkbox = new CheckBox();
+		
+		chkbox.setText("hogehoge");
+		
 		btn.setText("Say 'Hello World'");
 		btn.setOnAction(new EventHandler<ActionEvent>() {
 			
@@ -34,6 +38,7 @@ public class eduDSP extends Application {
 		
 		StackPane root = new StackPane();
 		root.getChildren().add(btn);
+		root.getChildren().add(chkbox);
 		
 		Scene scene = new Scene(root, 300, 250);
 		
