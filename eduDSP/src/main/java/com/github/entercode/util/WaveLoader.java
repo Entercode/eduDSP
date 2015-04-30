@@ -56,73 +56,70 @@ public class WaveLoader {
 			
 		}
 		
-		/*System.out.println("=== Char Read ===");
-		for(char c : cbuf) {
-			System.out.print(c);
-		}*/
-		System.out.println("=== Byte Read ===");
+		System.out.println("=== Load Format ===");
 		int bcnt = 0;	// byte count
 		
-		
 		// RIFF header
-		System.out.println(readWithChar(bbuf, bcnt, 4));
+		header.put("Riff", String.valueOf(readWithChar(bbuf, bcnt, 4)));
 		bcnt += 4;
 		
 		// File size - 8byte
-		System.out.println(readWithLong(bbuf, bcnt, 4));
+		header.put("FileSize", String.valueOf(readWithLong(bbuf, bcnt, 4)));
 		bcnt += 4;
 		
 		// WAVE header
-		System.out.println(readWithChar(bbuf, bcnt, 4));
+		header.put("Wave", String.valueOf(readWithChar(bbuf, bcnt, 4)));
 		bcnt += 4;
 		
 		// fmt chunk
-		System.out.println(readWithChar(bbuf, bcnt, 4));
+		header.put("Fmt", String.valueOf(readWithChar(bbuf, bcnt, 4)));
 		bcnt += 4;
 		
 		// bytes of fmt chunks
-		System.out.println(readWithLong(bbuf, bcnt, 4));
+		header.put("FmtSize", String.valueOf(readWithLong(bbuf, bcnt, 4)));
 		bcnt += 4;
 		
 		// format ID
-		System.out.println(readWithLong(bbuf, bcnt, 2));
+		header.put("FormatID", String.valueOf(readWithLong(bbuf, bcnt, 2)));
 		bcnt += 2;
 		
 		// Channel
-		System.out.println(readWithLong(bbuf, bcnt, 2));
+		header.put("Channel", String.valueOf(readWithLong(bbuf, bcnt, 2)));
 		bcnt += 2;
 		
 		// Sample Rate
-		System.out.println(readWithLong(bbuf, bcnt, 4));
+		header.put("SampleRate", String.valueOf(readWithLong(bbuf, bcnt, 4)));
 		bcnt += 4;
 		
 		// Data Speed (Byte/sec.)
-		System.out.println(readWithLong(bbuf, bcnt, 4));
+		header.put("DataSpeed", String.valueOf(readWithLong(bbuf, bcnt, 4)));
 		bcnt += 4;
 		
 		// Block Size ((Byte/Sample)*Channel)
-		System.out.println(readWithLong(bbuf, bcnt, 2));
+		header.put("BlockSize", String.valueOf(readWithLong(bbuf, bcnt, 2)));
 		bcnt += 2;
 		
 		// Bit Rate (Bit/Sample)
-		System.out.println(readWithLong(bbuf, bcnt, 2));
+		header.put("BitRate", String.valueOf(readWithLong(bbuf, bcnt, 2)));
 		bcnt += 2;
 		
 		// Extended block size (not used in liner PCM)
-		System.out.println(readWithLong(bbuf, bcnt, 0));
+		header.put("ExtendedBlockSize", String.valueOf(readWithLong(bbuf, bcnt, 0)));
 		bcnt += 0;
 		
 		// Extended block (not used in liner PCM)
-		System.out.println(readWithLong(bbuf, bcnt, 0));
+		header.put("ExtendedBlock", String.valueOf(readWithLong(bbuf, bcnt, 0)));
 		bcnt += 0;
 		
 		// Data chunk
-		System.out.println(readWithChar(bbuf, bcnt, 4));
+		header.put("Data", String.valueOf(readWithChar(bbuf, bcnt, 4)));
 		bcnt += 4;
 		
 		// Byte size of Data chunk
-		System.out.println(readWithLong(bbuf, bcnt, 4));
+		header.put("DataChunkSize", String.valueOf(readWithLong(bbuf, bcnt, 4)));
 		bcnt += 4;
+		
+		System.out.println(header.toString());
 		
 		return true;
 	}
