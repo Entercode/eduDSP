@@ -16,3 +16,8 @@ hs_err_pid*
 /eduDSP/nbproject/private/
 /eduDSP/dist/
 /JavaFXApplication2/nbproject/private/
+/waveview/.nb-gradle/private/
+/waveview/build/
+/JavaFXApplication/nbproject/private/
+/JavaFXApplication/build/
+/JavaFXApplication/dist/
