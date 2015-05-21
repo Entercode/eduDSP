@@ -33,7 +33,7 @@ apply from: 'http://dl.bintray.com/content/shemnon/javafx-gradle/0.4.0/javafx.pl
 sourceSets {
   main 
   samples {
-	  mainClass = 'com.github.entercode.edudsp.eduDSP'
+	  //mainClass = 'com.github.entercode.edudsp.eduDSP'
     java {
       
 	  compileClasspath += main.output
@@ -44,6 +44,6 @@ sourceSets {
 }
 
 javafx {
-	//mainClass = 'com.github.entercode.edudsp.eduDSP'
+	mainClass = 'com.github.entercode.edudsp.eduDSP'
     sourceSet = 'samples'
 } 
