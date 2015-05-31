@@ -5,10 +5,17 @@
  */
 package com.github.entercode.edudsp.view;
 
+import com.github.entercode.edudsp.block.Block;
+
 /**
  *
  * @author entercode
  */
 public class BlockDiagramView {
+	
+	void addBlock(Block b) {
+		
+		
+	}
 	
 }
