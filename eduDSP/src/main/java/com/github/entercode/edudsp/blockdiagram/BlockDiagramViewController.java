@@ -14,7 +14,9 @@ import javafx.scene.ImageCursor;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
+import javafx.scene.control.ContentDisplay;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 
 /**
@@ -42,12 +44,12 @@ public class BlockDiagramViewController implements Initializable {
 	public void initialize(URL location, ResourceBundle resources) {
 		GraphicsContext gc = fx_canvas_blockdiagramview.getGraphicsContext2D();
 		initEventHandler();
-		
-		//draw(gc);
 				
 		BlockDiagramViewAnimator bda = new BlockDiagramViewAnimator(gc);
 		//bda.start();
 	}
+	
+	
 	
 	
 	public void initEventHandler() {
@@ -59,7 +61,7 @@ public class BlockDiagramViewController implements Initializable {
 	}
 	
 	public void onAction_button_block_cursor() {
-		fx_canvas_blockdiagramview.setCursor(Cursor.DEFAULT);
+		fx_canvas_blockdiagramview.setCursor(new ImageCursor(new Image("/image/icon/cursor.png", 24, 24, true, true)));
 	}
 	public void onAction_button_block_select() {
 		fx_canvas_blockdiagramview.setCursor(new ImageCursor(new Image("/image/icon/select.png", 24, 24, true, true)));

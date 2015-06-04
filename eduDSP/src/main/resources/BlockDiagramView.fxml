@@ -13,15 +13,16 @@
   <children>
       <ToolBar prefHeight="40.0" prefWidth="200.0">
         <items>
-            <Button fx:id="fx_button_cursor" mnemonicParsing="false" onAction="#onAction_button_block_cursor" text="Cursor" />
-            <Button mnemonicParsing="false" text="Select" />
-            <Button fx:id="fx_button_block_remove" mnemonicParsing="false" onAction="#onAction_button_block_remove" text="Remove" />
-          <Button fx:id="fx_button_block_add" mnemonicParsing="false" onAction="#onAction_button_block_add" text="Add" />
-            <Button fx:id="fx_button_block_delay" layoutX="10.0" layoutY="11.0" mnemonicParsing="false" onAction="#onAction_button_block_delay" text="Delay" />
-            <Button fx:id="fx_button_block_multipy" layoutX="57.0" layoutY="11.0" mnemonicParsing="false" onAction="#onAction_button_block_multiply" text="Multiply" />
-            <Button fx:id="fx_button_block_amplifire" layoutX="128.0" layoutY="11.0" mnemonicParsing="false" onAction="#onAction_button_block_amplifire" text="Amplifire" />
+            <Button fx:id="fx_button_cursor" maxHeight="32.0" maxWidth="32.0" minHeight="32.0" minWidth="32.0" mnemonicParsing="false" onAction="#onAction_button_block_cursor" style="-fx-background-image: url(&quot;/image/icon/cursor.png&quot;); -fx-background-position: center; -fx-background-size: 24px 24px; -fx-background-repeat: no-repeat;" />
+            <Button fx:id="fx_button_block_select" maxHeight="32.0" maxWidth="32.0" minHeight="32.0" minWidth="32.0" mnemonicParsing="false" onAction="#onAction_button_block_select" style="-fx-background-image: url(&quot;/image/icon/select.png&quot;); -fx-background-position: center; -fx-background-size: 24px 24px; -fx-background-repeat: no-repeat;" />
+            <Button fx:id="fx_button_block_remove" maxHeight="32.0" maxWidth="32.0" minHeight="32.0" minWidth="32.0" mnemonicParsing="false" onAction="#onAction_button_block_remove" style="-fx-background-image: url(&quot;/image/icon/remove.png&quot;); -fx-background-repeat: no-repeat; -fx-background-position: center; -fx-background-size: 24 24;" />
+          <Button fx:id="fx_button_block_add" maxHeight="32.0" maxWidth="32.0" minHeight="32.0" minWidth="32.0" mnemonicParsing="false" onAction="#onAction_button_block_add" />
+            <Button fx:id="fx_button_block_delay" layoutX="10.0" layoutY="11.0" maxHeight="32.0" maxWidth="32.0" minHeight="32.0" minWidth="32.0" mnemonicParsing="false" onAction="#onAction_button_block_delay" />
+            <Button fx:id="fx_button_block_multiply" layoutX="57.0" layoutY="11.0" maxHeight="32.0" maxWidth="32.0" minHeight="32.0" minWidth="32.0" mnemonicParsing="false" onAction="#onAction_button_block_multiply" />
+            <Button fx:id="fx_button_block_amplifire" layoutX="128.0" layoutY="11.0" maxHeight="32.0" maxWidth="32.0" minHeight="32.0" minWidth="32.0" mnemonicParsing="false" onAction="#onAction_button_block_amplifire" />
         </items>
       </ToolBar>
+      <Pane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="32.0" prefWidth="640.0" style="-fx-background-color: #555555;" VBox.vgrow="NEVER" />
       <ScrollPane prefHeight="235.0" prefWidth="640.0" VBox.vgrow="ALWAYS">
          <content>
             <Canvas fx:id="fx_canvas_blockdiagramview" height="1080.0" width="1920.0" />

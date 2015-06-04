@@ -8,7 +8,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.entercode.edudsp.eduDSPController">
+<GridPane prefHeight="700.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.entercode.edudsp.eduDSPController">
   <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
   </columnConstraints>
@@ -60,11 +60,11 @@
             <Label id="fx_label_status" fx:id="fx_label_status" text="Nothing" />
         </items>
       </ToolBar>
-      <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" GridPane.rowIndex="1">
+      <SplitPane dividerPositions="0.7005988023952096" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" GridPane.rowIndex="1">
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                <children>
-                  <SplitPane dividerPositions="0.3" layoutX="48.0" layoutY="34.0" prefHeight="254.0" prefWidth="382.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <SplitPane dividerPositions="0.20100502512562815" layoutX="48.0" layoutY="34.0" prefHeight="254.0" prefWidth="382.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <items>
                       <AnchorPane minHeight="0.0" minWidth="30.0" prefHeight="160.0" prefWidth="100.0">
                            <children>
