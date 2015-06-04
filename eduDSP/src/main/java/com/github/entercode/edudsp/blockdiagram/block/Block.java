@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.github.entercode.edudsp.block;
+package com.github.entercode.edudsp.blockdiagram.block;
 
 import java.util.ArrayList;
 import javafx.scene.image.Image;
@@ -40,33 +40,10 @@ public abstract class Block {
 		this.texture = new Image(relativePath);
 	}
 	
-	public abstract void execute();
-	
-	private void output() {
-		outputArray.stream().forEach((b) -> {
-			b.setInputValue(inputValue);
-		});
-	}
-	public void addOutput(Block block) {
-		this.outputArray.add(block);
-	}
-	public void clearOutputArray() {
-		this.outputArray.clear();
-	}
-	
 	
 	/*
 		Accessor
 	*/
-	public void setInputValue(double value) {
-		this.inputValue = value;
-	}
-	public double getInputValue() {
-		return this.inputValue;
-	}
-	public ArrayList<Block> getOutputArray() {
-		return this.outputArray;
-	}
 	public int getWidth() {
 		return this.width;
 	}
