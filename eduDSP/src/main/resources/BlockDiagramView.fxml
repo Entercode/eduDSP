@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.canvas.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.entercode.edudsp.blockdiagram.BlockDiagramViewController">
+  <children>
+      <ToolBar prefHeight="40.0" prefWidth="200.0">
+        <items>
+            <Button fx:id="fx_button_cursor" maxHeight="32.0" maxWidth="32.0" minHeight="32.0" minWidth="32.0" mnemonicParsing="false" onAction="#onAction_button_block_cursor" style="-fx-background-image: url(&quot;/image/icon/cursor.png&quot;); -fx-background-position: center; -fx-background-size: 24px 24px; -fx-background-repeat: no-repeat;" />
+            <Button fx:id="fx_button_block_select" maxHeight="32.0" maxWidth="32.0" minHeight="32.0" minWidth="32.0" mnemonicParsing="false" onAction="#onAction_button_block_select" style="-fx-background-image: url(&quot;/image/icon/select.png&quot;); -fx-background-position: center; -fx-background-size: 24px 24px; -fx-background-repeat: no-repeat;" />
+            <Button fx:id="fx_button_block_remove" maxHeight="32.0" maxWidth="32.0" minHeight="32.0" minWidth="32.0" mnemonicParsing="false" onAction="#onAction_button_block_remove" style="-fx-background-image: url(&quot;/image/icon/remove.png&quot;); -fx-background-repeat: no-repeat; -fx-background-position: center; -fx-background-size: 24 24;" />
+          <Button fx:id="fx_button_block_add" maxHeight="32.0" maxWidth="32.0" minHeight="32.0" minWidth="32.0" mnemonicParsing="false" onAction="#onAction_button_block_add" />
+            <Button fx:id="fx_button_block_delay" layoutX="10.0" layoutY="11.0" maxHeight="32.0" maxWidth="32.0" minHeight="32.0" minWidth="32.0" mnemonicParsing="false" onAction="#onAction_button_block_delay" />
+            <Button fx:id="fx_button_block_multiply" layoutX="57.0" layoutY="11.0" maxHeight="32.0" maxWidth="32.0" minHeight="32.0" minWidth="32.0" mnemonicParsing="false" onAction="#onAction_button_block_multiply" />
+            <Button fx:id="fx_button_block_amplifire" layoutX="128.0" layoutY="11.0" maxHeight="32.0" maxWidth="32.0" minHeight="32.0" minWidth="32.0" mnemonicParsing="false" onAction="#onAction_button_block_amplifire" />
+        </items>
+      </ToolBar>
+      <Pane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="32.0" prefWidth="640.0" style="-fx-background-color: #555555;" VBox.vgrow="NEVER" />
+      <ScrollPane prefHeight="235.0" prefWidth="640.0" VBox.vgrow="ALWAYS">
+         <content>
+            <Canvas fx:id="fx_canvas_blockdiagramview" height="1080.0" width="1920.0" />
+         </content>
+      </ScrollPane>
+  </children>
+</VBox>
