@@ -10,19 +10,6 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
-<<<<<<< HEAD
-/Waveview/nbproject/private/
-/eduDSP/build/
-/eduDSP/.nb-gradle/profiles/private/
-/eduDSP/nbproject/private/
-/eduDSP/dist/
-/JavaFXApplication2/nbproject/private/
-/waveview/.nb-gradle/private/
-/waveview/build/
-/JavaFXApplication/nbproject/private/
-/JavaFXApplication/build/
-/JavaFXApplication/dist/
-=======
 .gradle/
 nbproject/private/
 build/
@@ -32,4 +19,4 @@ nbdist/
 nbactions.xml
 nb-configuration.xml
 .nb-gradle/
->>>>>>> d83e62745be49970ec899fb096997645253282be
+private/
