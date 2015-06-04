@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.entercode.edudsp.controller.BlockDiagramViewController">
+  <children>
+      <ToolBar prefHeight="40.0" prefWidth="200.0">
+        <items>
+          <Button fx:id="fx_button_block_add" mnemonicParsing="false" text="Add" />
+            <Button fx:id="fx_button_block_delay" layoutX="10.0" layoutY="11.0" mnemonicParsing="false" text="Delay" />
+            <Button fx:id="fx_button_block_multipy" layoutX="57.0" layoutY="11.0" mnemonicParsing="false" text="Multiply" />
+            <Button fx:id="fx_button_block_amplifire" layoutX="128.0" layoutY="11.0" mnemonicParsing="false" text="Amplifire" />
+            <Button fx:id="fx_button_block_remove" mnemonicParsing="false" text="Remove" />
+        </items>
+      </ToolBar>
+      <ScrollPane prefHeight="235.0" prefWidth="640.0" VBox.vgrow="ALWAYS">
+         <content>
+            <Canvas fx:id="fx_canvas_blockdiagram" height="1080.0" width="1920.0" />
+         </content>
+      </ScrollPane>
+  </children>
+</VBox>
