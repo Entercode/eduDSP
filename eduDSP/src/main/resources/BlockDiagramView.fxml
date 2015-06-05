@@ -25,7 +25,7 @@
       <Pane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="32.0" prefWidth="640.0" style="-fx-background-color: #555555;" VBox.vgrow="NEVER" />
       <ScrollPane prefHeight="235.0" prefWidth="640.0" VBox.vgrow="ALWAYS">
          <content>
-            <Canvas fx:id="fx_canvas_blockdiagramview" height="1080.0" width="1920.0" />
+            <Canvas fx:id="fx_canvas_blockdiagramview" height="1080.0" onMouseMoved="#onMouseMoved" width="1920.0" />
          </content>
       </ScrollPane>
   </children>
