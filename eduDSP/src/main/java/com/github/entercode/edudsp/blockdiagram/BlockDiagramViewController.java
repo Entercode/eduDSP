@@ -66,7 +66,7 @@ public class BlockDiagramViewController implements Initializable {
 		fx_canvas_blockdiagramview.setOnMousePressed(new EventHandler<MouseEvent>() {
 			@Override
 			public void handle(MouseEvent event) {
-				selectS.setLocation(event.getX(), event.getY());
+				selectS.setLocation((int)event.getX(), (int)event.getY());
 				System.out.println("pr" + selectS);
 				if(isFuncSelect) {
 					selecting = true;
@@ -77,7 +77,7 @@ public class BlockDiagramViewController implements Initializable {
 		fx_canvas_blockdiagramview.setOnMouseReleased(new EventHandler<MouseEvent>() {
 			@Override
 			public void handle(MouseEvent event) {
-				selectE.setLocation(event.getX(), event.getY());
+				selectE.setLocation((int)event.getX(), (int)event.getY());
 				System.out.println("re" + selectE);
 				selecting = false;
 			}
@@ -86,25 +86,25 @@ public class BlockDiagramViewController implements Initializable {
 			@Override
 			public void handle(MouseEvent event) {
 				if(selecting) {
-					System.out.println("m");
+					int x = 0, y = 0, w, h;
 					
-					double x = 0, y = 0, w, h;
-					w = event.getX() - selectS.x;
-					h = event.getY() - selectS.y;
-					if(w < 0) {
-						x = event.getX();
-						w *= -1.0;
-					} else {
-						x = selectS.x;
-					}
-					if(h < 0) {
-						y = event.getY();
-						h *= -1.0;
-					} else {
-						y = selectS.y;
-					}
+					x = (int)event.getX();
+					y = (int)event.getY();
+					w = x - selectS.x;
+					h = y - selectS.y;
 					
-					gc.strokeRect(x, y, w, h);
+					// Width
+					if(w < 0) w *= -1;
+					else x = (int)selectS.x;
+					
+					// Height
+					if(h < 0) h *= -1;
+					else y = (int)selectS.y;
+					
+					
+					
+					gc.setLineWidth(1.0);
+					gc.strokeRect(0.5 + x, 0.5 + y, w, h);
 					gc.stroke();
 				}
 			}
